@@ -1,0 +1,55 @@
+{
+  "name": "elitecode-ai-extension",
+  "displayName": "EliteCode AI",
+  "description": "Your Elite AI Coding Assistant in VS Code",
+  "version": "1.0.0",
+  "publisher": "solar",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/NoobKingNowBetter/Ai"
+  },
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "categories": [
+    "Machine Learning",
+    "Education"
+  ],
+  "activationEvents": [],
+  "main": "./extension.js",
+  "contributes": {
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "elitecode-ai-sidebar",
+          "title": "EliteCode AI"
+        }
+      ]
+    },
+    "views": {
+      "elitecode-ai-sidebar": [
+        {
+          "type": "webview",
+          "id": "elitecode.aiView",
+          "name": "Chat"
+        }
+      ]
+    },
+    "commands": [
+      {
+        "command": "elitecode.start",
+        "title": "Start EliteCode AI"
+      }
+    ]
+  },
+  "scripts": {
+    "package": "npx vsce package",
+    "test": "echo 'No test'"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.80.0",
+    "@types/node": "18.x",
+    "@vscode/vsce": "^2.31.1"
+  },
+  "dependencies": {}
+}
